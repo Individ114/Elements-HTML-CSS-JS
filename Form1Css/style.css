@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Indie+Flower&display=swap");
+*,
+*:before,
+*:after,
+form {
+  padding: 1px;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box; }
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none; }
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: white; }
+
+form {
+  max-width: 500px; }
+
+span {
+  display: inline-block;
+  width: 170px;
+  text-align: center;
+  font-family: "Indie Flower", sans-serif, Arial;
+  font-size: 2rem; }
+
+.span-message {
+  vertical-align: top; }
+
+input,
+.textarea {
+  width: 300px;
+  height: 1.5rem;
+  border: 1px solid #cfcfcf;
+  font-family: "Amatic SC", sans-serif, Arial;
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding: 0 16px;
+  outline: none; }
+
+input::placeholder,
+.textarea::placeholder {
+  opacity: 0.5; }
+
+.textarea {
+  margin-top: 11px;
+  resize: none;
+  height: 300px; }
+
+input:focus,
+.textarea:focus {
+  background-color: #f3f3f3; }
+
+label {
+  position: relative; }
+
+.input-submit {
+  width: 300px;
+  height: 70px;
+  background-color: #ffc240;
+  font-family: "Amatic SC", sans-serif, Arial;
+  font-weight: 900;
+  font-size: 2rem;
+  margin-top: 30px;
+  outline: none; }
+  .input-submit:focus {
+    background-color: #ffc240;
+    box-shadow: none;
+    transition: 0; }
+  .input-submit:hover {
+    background-color: #63f800; }
+  .input-submit:active {
+    background-color: #5de700; }
+
+textarea:required,
+input:required {
+  background: #fff url("multiplication_icon_135381.svg") right top no-repeat; }
+
+textarea:required:valid,
+input:required:valid {
+  background: #fff url("Tick_Mark_Dark_icon-icons.com_69147.svg") right top no-repeat; }
+
+@media (max-width: 489px) {
+  .label-message::before {
+    top: 62px; } }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,96 @@
+@import "nullstyle";
+
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Indie+Flower&display=swap");
+
+$proc: 100%;
+$font-atomic: "Amatic SC", sans-serif, Arial;
+$font-indi: "Indie Flower", sans-serif, Arial;
+%flex-row-center {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+}
+%flex-column-center {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+}
+form {
+      max-width: 500px;
+}
+span {
+      display: inline-block;
+      width: 170px;
+      text-align: center;
+      font-family: $font-indi;
+      font-size: 2rem;
+}
+.span-message {
+      vertical-align: top;
+}
+input,
+.textarea {
+      width: 300px;
+      height: 1.5rem;
+      border: 1px solid rgb(207, 207, 207);
+      font-family: $font-atomic;
+      font-weight: 900;
+      font-size: 1.1rem;
+      padding: 0 16px;
+      outline: none;
+}
+input::placeholder,
+.textarea::placeholder {
+      opacity: 0.5;
+}
+.textarea {
+      margin-top: 11px;
+      resize: none;
+      height: 300px;
+}
+input:focus,
+.textarea:focus {
+      background-color: rgb(243, 243, 243);
+}
+label {
+      position: relative;
+}
+
+.input-submit {
+      width: 300px;
+      height: 70px;
+      background-color: rgb(255, 194, 64);
+      font-family: $font-atomic;
+      font-weight: 900;
+      font-size: 2rem;
+      margin-top: 30px;
+      outline: none;
+
+      &:focus {
+            background-color: rgb(255, 194, 64);
+            box-shadow: none;
+            transition: 0;
+      }
+      &:hover {
+            background-color: rgb(99, 248, 0);
+      }
+      &:active {
+            background-color: rgb(93, 231, 0);
+      }
+}
+textarea:required,
+input:required {
+      background: #fff url("multiplication_icon_135381.svg") right top no-repeat;
+}
+textarea:required:valid,
+input:required:valid {
+      background: #fff url("Tick_Mark_Dark_icon-icons.com_69147.svg") right top
+            no-repeat;
+}
+@media (max-width: 489px) {
+      .label-message::before {
+            top: 62px;
+      }
+}
