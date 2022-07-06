@@ -1,0 +1,130 @@
+@import "nullstyle";
+$proc100: 100%;
+$proc50: 50%;
+%flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.button {
+      @extend %flex-center;
+
+      width: 200px;
+      height: 50px;
+      margin: 100px;
+      background-color: #000;
+      color: #fff;
+      border-radius: 2px;
+      box-shadow: -1px -1px 0px rgba(255, 0, 128, 0.486),
+            2px 2px 0px rgba(183, 0, 255, 0.486);
+      transition: 0.2s;
+
+      a {
+            @extend %flex-center;
+
+            width: $proc100;
+            height: $proc100;
+            color: #fff;
+      }
+      &:hover {
+            box-shadow: -5px -5px 0px rgba(255, 0, 128, 0.637),
+                  10px 10px 0px rgba(183, 0, 255, 0.63);
+            transform: scale(1.1);
+      }
+}
+.button2 {
+      @extend %flex-center;
+
+      width: 200px;
+      height: 50px;
+      margin: 100px;
+      background-color: #000;
+      color: #fff;
+      border-radius: 2px;
+      box-shadow: -1px -1px 0px rgba(255, 0, 128, 0.486),
+            2px 2px 0px rgba(183, 0, 255, 0.486);
+      transition: 0.1s;
+
+      a {
+            @extend %flex-center;
+            width: $proc100;
+            height: $proc100;
+      }
+      &:hover {
+            box-shadow: -20px -4px 0px rgba(255, 0, 128, 0.637),
+                  30px 8px 0px rgba(183, 0, 255, 0.63);
+            transform: scale(1.1);
+      }
+
+      span {
+            @extend %flex-center;
+            width: $proc100;
+            height: $proc100;
+            color: rgb(255, 0, 179);
+            text-shadow: 0px 0px 0px rgb(255, 0, 128),
+                  0px 0px 0px rgba(183, 0, 255, 0.726);
+            transition: 0.1s;
+            &:hover {
+                  text-shadow: -10px -1px 0px rgba(255, 0, 128, 0.637),
+                        15px 3px 0px rgba(183, 0, 255, 0.63);
+                  transform: scale(1.1);
+                  color: rgba(255, 255, 255, 0);
+            }
+      }
+}
+.button3 {
+      @extend %flex-center;
+
+      width: 200px;
+      height: 50px;
+      margin: 100px;
+      background: none;
+      color: #fff;
+      border-radius: 2px;
+      box-shadow: -0.02rem -0.02rem 0px rgb(255, 0, 128),
+            0.02rem 0.02rem 0px rgb(183, 0, 255);
+      transition: 0.1s;
+      a {
+            @extend %flex-center;
+            width: $proc100;
+            height: $proc100;
+      }
+      &:hover {
+            box-shadow: -20px -4px 0px rgba(255, 0, 128, 0.637),
+                  30px 8px 0px rgba(183, 0, 255, 0.63);
+            transform: scale(1.1);
+      }
+
+      span {
+            @extend %flex-center;
+            width: $proc100;
+            height: $proc100;
+            color: rgb(255, 0, 179);
+            text-shadow: 0px 0px 0px rgb(255, 0, 128),
+                  0px 0px 0px rgba(183, 0, 255, 0.726);
+            transition: 0.1s;
+            &:hover {
+                  text-shadow: -10px -1px 0px rgba(255, 0, 128, 0.637),
+                        15px 3px 0px rgba(183, 0, 255, 0.63);
+                  transform: scale(1.1);
+                  color: rgba(255, 255, 255, 0);
+            }
+      }
+}
+.button4 {
+      width: 250px;
+      margin: 100px;
+      span {
+            @extend %flex-center;
+            font-size: 3rem;
+            color: rgb(255, 255, 255);
+            text-shadow: -2px -2px 0px rgb(255, 0, 128),
+                  5px 5px 0px rgba(183, 0, 255, 0.726);
+            transition: 0.1s;
+            &:hover {
+                  text-shadow: -7px -5px 0px rgba(255, 0, 128, 0.637),
+                        0px 10px 0px rgba(183, 0, 255, 0.63);
+                  transform: translate(5px, 0);
+            }
+      }
+}
