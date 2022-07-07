@@ -16,10 +16,11 @@ details summary:before {
       width: 20px;
       height: 20px;
       margin-right: 10px;
+      transition: 1s;
 }
 details[open] summary:before {
       content: "";
-      background: url("icon2.svg") bottom left no-repeat;
+      transform: rotate(90deg);
 }
 summary {
       display: flex;
