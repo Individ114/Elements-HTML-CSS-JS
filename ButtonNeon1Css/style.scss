@@ -1,0 +1,172 @@
+@import "nullstyle";
+
+@mixin flexible($q, $w, $e) {
+      display: flex;
+      flex-direction: $q;
+      justify-content: $w;
+      align-items: $e;
+}
+
+$proc100: 100%;
+$proc50: 50%;
+$color-pink: #ff00c8;
+$color-green: #62f500;
+$color-blue: #0091ff;
+
+body {
+      width: 100vw;
+      height: 100vh;
+      @include flexible(column, center, center);
+      gap: 50px;
+}
+
+.a-button-blue {
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.35rem;
+      padding: 20px 40px;
+      background-color: rgb(32, 32, 32);
+      border: 2px solid gray;
+      transition: 0.2s;
+      position: relative;
+      &:hover {
+            padding: 18px 40px;
+            letter-spacing: 1rem;
+            box-shadow: 0 0 35px $color-blue;
+            border-color: $color-blue;
+            color: $color-blue;
+      }
+      &:before {
+            content: "";
+            position: absolute;
+            top: -6px;
+            right: 20%;
+            width: 20px;
+            height: 10px;
+            border: 2px solid $color-blue;
+            background-color: rgb(32, 32, 32);
+            transition: 0.2s;
+      }
+      &:hover:before {
+            right: 70%;
+            width: 30px;
+            border-color: $color-blue;
+      }
+      &:after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            right: 70%;
+            width: 20px;
+            height: 10px;
+            border: 2px solid $color-blue;
+            background-color: rgb(32, 32, 32);
+            transition: 0.2s;
+      }
+      &:hover:after {
+            right: 20%;
+            width: 30px;
+            border-color: $color-blue;
+      }
+}
+.a-button-pink {
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.35rem;
+      padding: 20px 40px;
+      background-color: rgb(32, 32, 32);
+      border: 2px solid gray;
+      transition: 0.2s;
+      position: relative;
+      &:hover {
+            padding: 18px 40px;
+            letter-spacing: 1rem;
+            box-shadow: 0 0 35px $color-pink;
+            border-color: $color-pink;
+            color: $color-pink;
+      }
+      &:before {
+            content: "";
+            position: absolute;
+            top: -6px;
+            right: 20%;
+            width: 20px;
+            height: 10px;
+            border: 2px solid $color-pink;
+            background-color: rgb(32, 32, 32);
+            transition: 0.2s;
+      }
+      &:hover:before {
+            right: 70%;
+            width: 30px;
+            border-color: $color-pink;
+      }
+      &:after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            right: 70%;
+            width: 20px;
+            height: 10px;
+            border: 2px solid $color-pink;
+            background-color: rgb(32, 32, 32);
+            transition: 0.2s;
+      }
+      &:hover:after {
+            right: 20%;
+            width: 30px;
+            border-color: $color-pink;
+      }
+}
+.a-button-green {
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.35rem;
+      padding: 20px 40px;
+      background-color: rgb(32, 32, 32);
+      border: 2px solid gray;
+      transition: 0.2s;
+      position: relative;
+      &:hover {
+            padding: 18px 40px;
+            letter-spacing: 1rem;
+            box-shadow: 0 0 35px $color-green;
+            border-color: $color-green;
+            color: $color-green;
+      }
+      &:before {
+            content: "";
+            position: absolute;
+            top: -6px;
+            right: 20%;
+            width: 20px;
+            height: 10px;
+            border: 2px solid $color-green;
+            background-color: rgb(32, 32, 32);
+            transition: 0.2s;
+      }
+      &:hover:before {
+            right: 70%;
+            width: 30px;
+            border-color: $color-green;
+      }
+      &:after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            right: 70%;
+            width: 20px;
+            height: 10px;
+            border: 2px solid $color-green;
+            background-color: rgb(32, 32, 32);
+            transition: 0.2s;
+      }
+      &:hover:after {
+            right: 20%;
+            width: 30px;
+            border-color: $color-green;
+      }
+}
