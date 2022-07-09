@@ -1,0 +1,61 @@
+@import "nullstyle";
+
+@mixin flexible($q, $w, $e, $r) {
+      display: flex;
+      flex-direction: $q;
+      justify-content: $w;
+      align-items: $e;
+      gap: $r;
+}
+$color-main: rgb(66, 255, 176);
+
+body {
+      @include flexible(column, center, center, 20px);
+      font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-box {
+      width: 300px;
+      position: relative;
+
+      input {
+            width: 100%;
+            padding: 20px 10px;
+            background: none;
+            border: 1px solid gray;
+            border-radius: 5px;
+            outline: none;
+            color: #fff;
+            &:focus,
+            &:valid {
+                  border-color: $color-main;
+            }
+      }
+      span {
+            position: absolute;
+            left: 0;
+            padding: 20px 10px;
+            color: grey;
+            text-transform: uppercase;
+            transition: 0.2s;
+            pointer-events: none;
+      }
+      & input:focus ~ span,
+      & input:valid ~ span {
+            padding: 3px 10px;
+            font-size: 0.7rem;
+            top: 0;
+            color: $color-main;
+            transform: translate(12px, -9px);
+            background: rgb(21, 29, 41);
+            border-left: 1px solid $color-main;
+            border-right: 1px solid $color-main;
+            letter-spacing: 0.15rem;
+      }
+      &:nth-of-type(2) input:focus ~ span,
+      &:nth-of-type(2) input:valid ~ span {
+            background-color: $color-main;
+            color: #000;
+            border-radius: 2px;
+      }
+}
