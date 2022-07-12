@@ -1,5 +1,7 @@
 Цветной градиент перетекает вдоль границы.
+<br>
 Border color move
+<br>
 ONLY CSS
 <br>
 <br>
