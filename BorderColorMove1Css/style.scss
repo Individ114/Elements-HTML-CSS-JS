@@ -1,0 +1,97 @@
+@import "nullstyle";
+
+@mixin flexible($q, $w, $e, $r, $t) {
+      display: flex;
+      flex-direction: $q;
+      justify-content: $w;
+      align-items: $e;
+      gap: $r;
+}
+
+body {
+      @include flexible(row, center, center, 0, 0);
+}
+
+.box {
+      @include flexible(row, center, center, 0, 0);
+      width: 200px;
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      background-origin: border-box;
+      background-color: rgb(26, 42, 49);
+
+      position: relative;
+}
+
+.box::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: conic-gradient(
+            from 45deg,
+            red,
+            orange,
+            yellow,
+            green,
+            blue,
+            purple,
+            red
+      );
+      animation-name: border;
+      animation-duration: 8s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      @keyframes border {
+            from {
+                  transform: rotate(0);
+            }
+            to {
+                  transform: rotate(360deg);
+            }
+      }
+}
+.box::after {
+      content: "";
+      position: absolute;
+      width: 95%;
+      height: 96.9%;
+      border-radius: 7px;
+      background: rgb(26, 42, 49);
+}
+.span1 {
+      display: block;
+      z-index: 4;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 3rem;
+      font-weight: 900;
+      background-image: linear-gradient(to left, #ffffff, #00b7ff);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      position: relative;
+      pointer-events: none;
+      &:before {
+            content: "border";
+            font-size: 0.8rem;
+            font-weight: 400;
+            position: absolute;
+            top: 12px;
+            letter-spacing: 0.23rem;
+            right: 0;
+            color: rgb(255, 255, 255);
+      }
+}
+.span2 {
+      z-index: 2;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 3rem;
+      font-weight: 900;
+      color: #000;
+      position: absolute;
+      transition: 0.3s;
+      &:hover {
+            transform: rotate(10deg) translate(0, 15px);
+      }
+}
