@@ -1,0 +1,96 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box; }
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none; }
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: white; }
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0; }
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style: none; }
+
+.item {
+  box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.103);
+  border-radius: 100px;
+  width: 130px;
+  height: 130px;
+  transition: 0.3s;
+  position: relative; }
+  .item img {
+    width: 100px;
+    transition: 0.5s; }
+  .item a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    height: 100%; }
+  .item:hover {
+    width: 350px;
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.342); }
+    .item:hover img {
+      width: 0px;
+      transition: 0.5s; }
+
+.i1:hover {
+  background: linear-gradient(to left, #ff31d2, #ce00ab); }
+
+.i2:hover {
+  background: linear-gradient(to left, #06c5ff, #0092cc); }
+
+.i3:hover {
+  background: linear-gradient(to left, #06ff66, #27a700); }
+
+.i4:hover {
+  background: linear-gradient(to left, #ff9306, #ff7b00); }
+
+.i5:hover {
+  background: linear-gradient(to left, #ff4343, #c22828); }
+
+span {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 0;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  transition: 0.2s; }
+  .item:hover span {
+    font-size: 3rem;
+    transition-delay: 0.15s; }
+
+@media (max-width: 850px) {
+  .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; } }
+
+/*# sourceMappingURL=style.css.map */
