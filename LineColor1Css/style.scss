@@ -1,0 +1,185 @@
+@import "nullstyle";
+
+@mixin flexble($q, $w, $e, $r) {
+      display: flex;
+      flex-direction: $q;
+      justify-content: $w;
+      align-items: $e;
+      gap: $r;
+}
+
+%flex-row-center {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+}
+
+$proc100: 100%;
+$px100: 100px;
+
+body {
+      @include flexble(column, center, center, 0px);
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgb(209, 209, 209);
+}
+.container {
+      &:hover .line {
+            opacity: 0.4;
+      }
+}
+.line {
+      @extend %flex-row-center;
+      justify-content: flex-end;
+      width: 500px;
+      height: 60px;
+      border-radius: 10px;
+      border: 2px solid black;
+      transition: 0.3s;
+      margin: 10px 0;
+      background: linear-gradient(
+            180deg,
+            rgb(85, 93, 97) 3%,
+            rgb(45, 47, 51) 7% 50%,
+            rgb(26, 28, 31) 50% 100%
+      );
+      .text {
+      }
+      .range {
+            width: 300px;
+            height: 20px;
+            border-radius: 60px;
+            background-color: #000;
+            margin: 0 10px;
+            position: relative;
+            &::after {
+                  content: "";
+                  position: absolute;
+                  width: 0%;
+                  height: 20px;
+                  border-radius: 60px;
+            }
+      }
+      .container &:hover {
+            transform: scale(1.1);
+            opacity: 1;
+            transition: 0.3s;
+      }
+}
+
+.line-1 {
+      &::after {
+            background: linear-gradient(
+                  90deg,
+                  rgb(255, 0, 119),
+                  rgb(225, 0, 255)
+            );
+            animation: 1s ease 0.5s 1 normal forwards liner1;
+            @keyframes liner1 {
+                  to {
+                        width: 90%;
+                  }
+            }
+      }
+}
+.proc1 {
+      width: 50px;
+      position: relative;
+      &::after {
+            content: "0%";
+            position: absolute;
+            animation: 2s ease 0.5s 1 normal forwards procent1;
+            @keyframes procent1 {
+                  to {
+                        content: "90%";
+                  }
+            }
+      }
+}
+.line-2 {
+      &::after {
+            background: linear-gradient(
+                  90deg,
+                  rgb(195, 0, 255),
+                  rgb(89, 0, 255)
+            );
+            animation: 1s ease-in 0.5s 1 normal forwards liner2;
+            @keyframes liner2 {
+                  to {
+                        width: 85%;
+                  }
+            }
+      }
+}
+.proc2 {
+      width: 50px;
+      position: relative;
+      &::after {
+            content: "0%";
+            position: absolute;
+            animation: 2s ease 0.5s 1 normal forwards procent2;
+            @keyframes procent2 {
+                  to {
+                        content: "85%";
+                  }
+            }
+      }
+}
+.line-3 {
+      &::after {
+            background: linear-gradient(
+                  90deg,
+                  rgb(255, 166, 0),
+                  rgb(255, 251, 0)
+            );
+            animation: 1s ease-in-out 0.5s 1 normal forwards liner3;
+            @keyframes liner3 {
+                  to {
+                        width: 23%;
+                  }
+            }
+      }
+}
+.proc3 {
+      width: 50px;
+      position: relative;
+      &::after {
+            content: "0%";
+            position: absolute;
+            animation: 2s ease 0.5s 1 normal forwards procent3;
+            @keyframes procent3 {
+                  to {
+                        content: "23%";
+                  }
+            }
+      }
+}
+.line-4 {
+      &::after {
+            background: linear-gradient(
+                  90deg,
+                  rgb(0, 183, 255),
+                  rgb(0, 102, 255)
+            );
+            animation: 1s ease-out 0.5s 1 normal forwards liner4;
+            @keyframes liner4 {
+                  to {
+                        width: 15%;
+                  }
+            }
+      }
+}
+.proc4 {
+      width: 50px;
+      position: relative;
+      &::after {
+            content: "0%";
+            position: absolute;
+            animation: 2s ease 0.5s 1 normal forwards procent4;
+            @keyframes procent4 {
+                  to {
+                        content: "15%";
+                  }
+            }
+      }
+}

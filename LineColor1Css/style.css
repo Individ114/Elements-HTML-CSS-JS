@@ -1,0 +1,130 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box; }
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none; }
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, #464646, #161616); }
+
+.line {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #d1d1d1; }
+
+.container:hover .line {
+  opacity: 0.4; }
+
+.line {
+  justify-content: flex-end;
+  width: 500px;
+  height: 60px;
+  border-radius: 10px;
+  border: 2px solid black;
+  transition: 0.3s;
+  margin: 10px 0;
+  background: linear-gradient(180deg, #555d61 3%, #2d2f33 7% 50%, #1a1c1f 50% 100%); }
+  .line .range {
+    width: 300px;
+    height: 20px;
+    border-radius: 60px;
+    background-color: #000;
+    margin: 0 10px;
+    position: relative; }
+    .line .range::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 20px;
+      border-radius: 60px; }
+  .container .line:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    transition: 0.3s; }
+
+.line-1::after {
+  background: linear-gradient(90deg, #ff0077, #e100ff);
+  animation: 1s ease 0.5s 1 normal forwards liner1; }
+@keyframes liner1 {
+  to {
+    width: 90%; } }
+.proc1 {
+  width: 50px;
+  position: relative; }
+  .proc1::after {
+    content: "0%";
+    position: absolute;
+    animation: 2s ease 0.5s 1 normal forwards procent1; }
+@keyframes procent1 {
+  to {
+    content: "90%"; } }
+.line-2::after {
+  background: linear-gradient(90deg, #c300ff, #5900ff);
+  animation: 1s ease-in 0.5s 1 normal forwards liner2; }
+@keyframes liner2 {
+  to {
+    width: 85%; } }
+.proc2 {
+  width: 50px;
+  position: relative; }
+  .proc2::after {
+    content: "0%";
+    position: absolute;
+    animation: 2s ease 0.5s 1 normal forwards procent2; }
+@keyframes procent2 {
+  to {
+    content: "85%"; } }
+.line-3::after {
+  background: linear-gradient(90deg, #ffa600, #fffb00);
+  animation: 1s ease-in-out 0.5s 1 normal forwards liner3; }
+@keyframes liner3 {
+  to {
+    width: 23%; } }
+.proc3 {
+  width: 50px;
+  position: relative; }
+  .proc3::after {
+    content: "0%";
+    position: absolute;
+    animation: 2s ease 0.5s 1 normal forwards procent3; }
+@keyframes procent3 {
+  to {
+    content: "23%"; } }
+.line-4::after {
+  background: linear-gradient(90deg, #00b7ff, #0066ff);
+  animation: 1s ease-out 0.5s 1 normal forwards liner4; }
+@keyframes liner4 {
+  to {
+    width: 15%; } }
+.proc4 {
+  width: 50px;
+  position: relative; }
+  .proc4::after {
+    content: "0%";
+    position: absolute;
+    animation: 2s ease 0.5s 1 normal forwards procent4; }
+@keyframes procent4 {
+  to {
+    content: "15%"; } }
+
+/*# sourceMappingURL=style.css.map */
