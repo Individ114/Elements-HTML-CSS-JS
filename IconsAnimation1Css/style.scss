@@ -1,0 +1,62 @@
+@import "nullstyle";
+
+@mixin flexible($q, $w, $e, $r) {
+      display: flex;
+      flex-direction: $q;
+      justify-content: $w;
+      align-items: $e;
+      gap: $r;
+}
+$proc100: 100%;
+$px100: 100px;
+%flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+body {
+      @include flexible(row, center, center, 0);
+}
+.box {
+      @include flexible(row, center, center, 70px);
+      position: relative;
+      .ic2 {
+            top: 5px;
+      }
+      .ic4 {
+            top: 5px;
+      }
+      &::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            width: 110%;
+            height: 55%;
+            backdrop-filter: blur(5px);
+      }
+}
+.img_mod {
+      transition: 0.3s;
+}
+.img_mod:hover {
+      transform: translate(0, -60px);
+      transition: 0.3s;
+      i {
+            transform: scale(2);
+      }
+      svg {
+            fill: white;
+      }
+}
+i {
+      position: absolute;
+      display: block;
+      width: 100px;
+      height: 100px;
+      background: rgb(0, 163, 172);
+      z-index: -1;
+      transform: scale(0);
+      transition: 0.3s;
+      border-radius: 50%;
+      pointer-events: none;
+}
