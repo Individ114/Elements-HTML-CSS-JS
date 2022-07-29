@@ -1,4 +1,5 @@
 Иконки анимируются при наведении
+Icons animation only CSS
 <br>
 <br>
 ![Screenshot_5](https://user-images.githubusercontent.com/104467944/181764031-70794977-4263-4a94-acbe-fa8a690ec4fb.jpg)
