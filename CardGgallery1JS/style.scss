@@ -1,0 +1,56 @@
+@import "nullstyle";
+
+@mixin flexible($q, $w, $e, $r) {
+      display: flex;
+      flex-direction: $q;
+      justify-content: $w;
+      align-items: $e;
+      gap: $r;
+}
+
+$proc100: 100%;
+
+%flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+body {
+      @extend %flex-center;
+}
+.container {
+      @include flexible(row, space-evenly, center, 0);
+      width: 100%;
+      height: 80%;
+      padding: 0 10px;
+      .picture {
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex: 1 1 auto;
+            margin: 0 10px;
+            border-radius: 20px;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            transition: 0.3s;
+      }
+      .picture.active {
+            flex: 10 1 auto;
+      }
+      .picture h3 {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            text-shadow: -1px 2px 3px #111;
+            opacity: 0;
+      }
+      .picture.active h3 {
+            opacity: 1;
+            transition-duration: 0.3s;
+            transition-delay: 0.3s;
+      }
+}
