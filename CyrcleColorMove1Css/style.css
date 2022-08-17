@@ -1,0 +1,85 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box; }
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none; }
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black; }
+
+body,
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff; }
+
+.container {
+  display: flex;
+  width: 500px;
+  justify-content: center;
+  -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.493)); }
+
+.circle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(black 10%, rgba(255, 0, 221, 0.699) 50%, black 50% 60%, rgba(0, 255, 242, 0.699) 100%);
+  border-radius: 50%;
+  position: relative;
+  animation-name: circle;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; }
+  .circle::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: #ff00dd;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    box-shadow: 0 0 10px #ff00dd, 0 0 20px #ff00dd, 0 0 30px #ff00dd, 0 0 40px #ff00dd, 0 0 50px #ff00dd, 0 0 60px #ff00dd, 0 0 70px #ff00dd, 0 0 80px #ff00dd, 0 0 90px #ff00dd, 0 0 100px #ff00dd; }
+  .circle::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: #00fff2;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    box-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 0 90px #00fff2, 0 0 100px #00fff2; }
+@keyframes circle {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  .circle .ball {
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    border-radius: 50%; }
+
+/*# sourceMappingURL=style.css.map */
